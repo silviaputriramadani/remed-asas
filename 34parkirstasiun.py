@@ -16,15 +16,15 @@ def hitung_biaya_parkir(durasi):
     # Jika durasi parkir lebih dari atau sama dengan 24 jam
     elif durasi >= 24:
         # Biaya dihitung berdasarkan tarif awal dan tarif tambahan per jam
-        biaya = tarif_awal + tarif_lebih_dari_2jam * (durasi - 2)
+        biaya = tarif_awal + tarif_lebih_dari_2jam * (durasi - 2) + lebih_dari_24jam
     else:
         # Biaya dihitung untuk durasi antara 3 hingga 23 jam
-        biaya = tarif_awal + tarif_lebih_dari_2jam * (durasi - 2) + tarif_lebih_dari_2jam
-
-    # Mengembalikan total biaya parkir
+        biaya = tarif_awal + tarif_lebih_dari_2jam * (durasi - 2) 
+        
+# mengembalikkan hasil perhitungan biaya parkir
     return biaya
 
-# Memulai blok try untuk menangkap kesalahan input
+# input dari pengguna
 try:
     # Meminta input durasi parkir dari pengguna
     durasi = int(input("Masukkan durasi parkir Anda: "))
